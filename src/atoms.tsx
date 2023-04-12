@@ -33,6 +33,7 @@ export const categoryState = atom<Categories>({
 export const customCategoryState = atom<ICustomCategory[]>({
     key: "customCategory",
     default: [],
+    effects_UNSTABLE: [persistAtom], // localStorage
 });
 
 export const toDoState = atom<IToDo[]>({
