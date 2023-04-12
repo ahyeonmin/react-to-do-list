@@ -19,13 +19,13 @@ function CreateToDo() {
     };
     return (
         <form onSubmit={handleSubmit(onValid)}>
-        <input
-            {...register("toDo", {
-                required: "Please write a to do."
-            })}
-            placeholder="Write a to do..."
-        />
-        <button>Add</button>
+            <input
+                {...register("toDo", {
+                    required: "Please write a to do."
+                })}
+                placeholder="Write a to do..."
+            />
+            <button>Add</button>
         </form>
     );
 }
