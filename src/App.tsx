@@ -4,6 +4,12 @@ import ToDoList from './components/ToDoList';
 
 const GlobalStyle = createGlobalStyle`
   @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+  @font-face {
+    font-family: 'DOSSaemmul';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_eight@1.0/DOSSaemmul.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
 
   html, body, div, span, applet, object, iframe,
   h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -35,7 +41,7 @@ const GlobalStyle = createGlobalStyle`
       display: none;
   }
   body {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: 'DOSSaemmul';
     line-height: 1;
   }
   menu, ol, ul {
@@ -54,12 +60,47 @@ const GlobalStyle = createGlobalStyle`
     border-spacing: 0;
   }
   body {
-    background-color: ${(props) => props.theme.bgColor};
+    background-color: #F8F5F6;
     color: ${(props) => props.theme.textColor};
+    font-size: 11px;
   }
   a {
     color: inherit;
     text-decoration: none;
+  }
+  select {
+    background-color: white;
+    color: #444444;
+    font-family: 'DOSSaemmul';
+    font-size: 11px;
+    border: 1px solid gray;
+    border-radius: 0%;
+    padding: 0 3px;
+    margin-right: 5px;
+    appearance: none;
+  }
+  input {
+    width: 170px;
+    font-family: 'DOSSaemmul';
+    background-color: white;
+    border: 1px solid gray;
+    margin-right: 5px;
+    padding: 5px 7px;
+    :focus {
+      border: 1px solid none;
+    }
+    ::placeholder {
+      font-size: 11px;
+    }
+  }
+  button {
+    background-color: ${(prop) => prop.theme.btnColor};
+    color: #444444;
+    font-family: 'DOSSaemmul';
+    font-size: 11px;
+    padding: 6px 7px;
+    border: 1px solid gray;
+    margin-right: 5px;
   }
 `;
 

@@ -17,9 +17,9 @@ function CreateCategory() {
         <form onSubmit={handleSubmit(onValid)}>
             <input
                 {...register("customCategory")}
-                placeholder="Add a new category..."
+                placeholder="새로운 카테고리를 추가..."
             />
-            <button>Add</button>
+            <button>추가</button>
         </form>
     );
 }

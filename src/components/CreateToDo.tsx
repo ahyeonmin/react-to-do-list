@@ -23,9 +23,9 @@ function CreateToDo() {
                 {...register("toDo", {
                     required: "Please write a to do."
                 })}
-                placeholder="Write a to do..."
+                placeholder="새로운 할 일을 입력..."
             />
-            <button>Add</button>
+            <button>추가</button>
         </form>
     );
 }

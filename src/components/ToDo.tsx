@@ -1,7 +1,16 @@
+import styled from "styled-components";
 import { useSetRecoilState } from "recoil";
 import { Categories, IToDo, toDoState } from "../atoms";
 
 function ToDo({ text, id, category }: IToDo) {
+    const List = styled.li`
+        padding-bottom: 10px;
+        span {
+            padding-right: 5px;
+            font-size: 13px;
+        }
+    `;
+
     const setToDos = useSetRecoilState(toDoState);
     const changeCategory = (event: React.MouseEvent<HTMLButtonElement>) => {
         const {
@@ -20,19 +29,19 @@ function ToDo({ text, id, category }: IToDo) {
         });
     };
     return (
-        <li>
-            <span>{text}</span>
+        <List>
+            <span> {text} </span>
             {category !== Categories.DOING && (
-                <button name={Categories.DOING} onClick={changeCategory}>Doing</button>
+                <button name={Categories.DOING} onClick={changeCategory}>진행 중</button>
             )}
             {category !== Categories.TO_DO && (
-                <button name={Categories.TO_DO} onClick={changeCategory}>To Do</button>
+                <button name={Categories.TO_DO} onClick={changeCategory}>할 일</button>
             )}
             {category !== Categories.DONE && (
-                <button name={Categories.DONE} onClick={changeCategory}>Done</button>
+                <button name={Categories.DONE} onClick={changeCategory}>완료</button>
             )}
-            <button onClick={onDelete}>Delete</button>
-        </li>
+            <button onClick={onDelete}>삭제</button>
+        </List>
     );
 }
 
