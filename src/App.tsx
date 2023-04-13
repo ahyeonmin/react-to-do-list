@@ -101,6 +101,7 @@ const GlobalStyle = createGlobalStyle`
     padding: 6px 7px;
     border: 1px solid gray;
     margin-right: 5px;
+    cursor: pointer;
   }
 `;
 
