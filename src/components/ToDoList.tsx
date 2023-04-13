@@ -25,7 +25,7 @@ function ToDoList() {
         background-color: #ECECEC;
         padding: 5px;
         border-bottom: 1px solid gray;
-        font-size: 12px;
+        font-size: 11px;
     `;
     const Content = styled.div`
         display: flex;
